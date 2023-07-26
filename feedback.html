@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+  
+        body {
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            color: black;
+            font-size: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            margin-left: -4rem;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("cake_background.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feedback-form {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: beige;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px hotpink;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .feedback-form:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .rating-container {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 1rem;
+            width: 50rem;
+            margin-left: -4rem;
+        }
+
+        .rating-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .rating-stars {
+            font-size: 3rem;
+            color: #ffcf2a;
+        }
+
+        label {
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            cursor: pointer;
+            color: black;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+
+        input[type="radio"]:checked ~ label:before {
+            content: "\2605";
+            color: #ffcf2a;
+        }
+
+        .form-field {
+            margin-bottom: 15px;
+        }
+
+        .form-field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-field input[type="text"],
+        .form-field textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid pink;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 35rem;
+            margin-left: 0.5rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-field input[type="text"]:focus,
+        .form-field textarea:focus {
+            border-color: hotpink;
+        }
+
+        .form-field textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            max-width: 150px;
+            margin: 0 auto;
+            padding: 10px 15px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: pink;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-color: hotpink;
+            color: black;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: hotpink;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>FEEDBACK FORM</h1>
+    <div class="form-container">
+        <div class="feedback-form">
+            <form action="feedback.html" method="post">
+                <div class="rating-container">
+                    <p class="rating-label">How do you rate your overall experience?</p>
+                    <div class="rating-stars">
+                        <input type="radio" id="rate5" name="rate" value="5" required>
+                        <label for="rate5"></label>
+                        <input type="radio" id="rate4" name="rate" value="4">
+                        <label for="rate4"></label>
+                        <input type="radio" id="rate3" name="rate" value="3">
+                        <label for="rate3"></label>
+                        <input type="radio" id="rate2" name="rate" value="2">
+                        <label for="rate2"></label>
+                        <input type="radio" id="rate1" name="rate" value="1">
+                        <label for="rate1"></label>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>Name</label>
+                    <input type="text" name="fullName" required>
+                </div>
+                <div class="form-field">
+                    <label>Email</label>
+                    <input type="text" name="email" required>
+                </div>
+                <div class="form-field">
+                    <label>Age</label>
+                    <input type="text" name="age" required>
+                </div>
+                <div class="form-field">
+                    <label>Phone</label>
+                    <input type="text" name="phone" required>
+                </div>
+                <div class="form-field">
+                    <label>Message</label>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
